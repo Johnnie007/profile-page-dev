@@ -1,0 +1,69 @@
+.maintenance-container {
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.maintenance-body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.maintenance-header, .maintenance-text { color: white; }
+.maintenance-subtext { color: grey; }
+
+/* STATIC CONTAINER: Keeps layout perfectly safe */
+.circle {
+  position: relative; /* Anchor for absolute positioning */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 6.25rem;
+  height: 6.25rem;
+  border-radius: 50%;
+}
+
+.ripple-bg, .ripple-bg-2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid orange;
+  border-radius: 50%;
+  z-index: 1;
+  animation: smooth-ripple 5s infinite linear;
+  opacity: 0;
+}
+.ripple-bg-2 {
+  animation-delay: 2s
+}
+
+.spin-animation {
+  position: relative;
+  z-index: 2;
+  animation: spin-animation 10s infinite;
+}
+
+@keyframes smooth-ripple {
+  0% {
+    transform: scale(1);
+    opacity: .5;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.2;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0; 
+  }
+}
+
+@keyframes spin-animation {
+  50% { transform: rotate(30deg); }
+}
