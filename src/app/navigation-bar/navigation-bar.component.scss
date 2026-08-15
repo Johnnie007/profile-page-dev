@@ -1,10 +1,11 @@
 .navigation-container{
     display: flex;
     justify-content: space-between;
+    background-color: #F8F5EF;
+    border-bottom: 1px solid #DDDAD4;
 }
 
 .name-container{
-    width: 11.5rem;
     margin-left: 1rem;
     display: flex;
     justify-content: center;
@@ -13,7 +14,7 @@
 
 .name{
     font-family: 'PhilosopherRegular';
-    font-size: 30px
+    font-size: 1rem
 }
 
 .navigation-links-container{
@@ -30,13 +31,12 @@
 .link{
     text-decoration: none;
     font-family: 'PhilosopherRegular';
-    color: #727272;
+    color: #7B7B7B;
     padding-bottom: 5px;
 }
 
 
 .active-link{
-    color: #000;
+    color: #1C1917;
     font-family: 'PhilosopherBold';
-    border-bottom: 1px solid #000;
 }

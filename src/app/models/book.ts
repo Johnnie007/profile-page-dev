@@ -1,13 +1,25 @@
-export interface Book {
+export interface BookSeries{
+    id: string,
+    seriesName: string,
+    books: Book[]
+}
+
+interface Book {
     id: string,
     title: string
-    series: string,
     category: string,
     details: string | null,
-    cost: string | null,
-    releaseDate: Date | null,
+    format: string,
+    price: string | null,
     inventory: number | null,
     printToOrderLink: string | null,
+    pdfVersion: string | null,
     pages: number | null,
     image: string | null,
+    published: Published
+}
+
+interface Published{
+    isPublished: boolean,
+    publishedDate: Date
 }
