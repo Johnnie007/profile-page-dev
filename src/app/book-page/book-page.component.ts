@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BookSeries } from '../models/book';
 
 @Component({
   selector: 'app-book-page',
@@ -7,5 +8,55 @@ import { Component } from '@angular/core';
   styleUrl: './book-page.component.scss',
 })
 export class BookPageComponent {
+
+  bookSeries: BookSeries = {
+  id: "1",
+  seriesName: "Jessie's Journey's",
+  books:[
+    {
+    id: "1",
+    title: "Jessie to the Land of Flowers",
+    details: `Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat
+        In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus 
+        nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent 
+        taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.`,
+    format: "Paperback/Digital",
+    price: "$5.99",
+    inventory: 0,
+    printToOrderLink: null,
+    pdfVersion: null,
+    pages: 200,
+    image: null,
+    category: "Children's Chapter Book",
+    published: {
+      isPublished: true,
+      publishedDate: new Date("2026-10-01")
+    }
+  },
+  {
+    id: "2",
+    title: "Jessie and the Two Kings",
+    details: `Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat
+        In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus 
+        nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent 
+        taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.`,
+    format: "Paperback/Digital",
+    price: "$5.99",
+    inventory: 0,
+    printToOrderLink: null,
+    pdfVersion: null,
+    pages: null,
+    image: null,
+    category: "Children's Chapter Book",
+    published: {
+      isPublished: false,
+      publishedDate: new Date("2027-12-31")
+    }
+  }]
+ };
+
+ getPublishedYear(date: Date): string {
+    return new Date(date).getFullYear().toString();
+  }
 
 }

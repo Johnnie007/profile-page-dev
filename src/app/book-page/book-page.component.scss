@@ -1,0 +1,142 @@
+.books-container {
+  background-color: #f8f5ef;
+  min-height: 100vh;
+}
+
+.title-header {
+  display: flex;
+  align-items: center;
+  padding-top: 5rem;
+}
+
+.header-right {
+  font-size: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header-left {
+  margin-left: 1.5rem;
+  font-size: 1rem;
+  color: #a7a7a7;
+}
+
+.texture {
+  font-size: 2rem;
+  color: #1c1917;
+}
+
+// Book Info
+.book-section {
+  display: flex;
+  margin: 5rem 1.5rem 0 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.book-section:not(:last-child) {
+  border-bottom: 1px solid #7b7b7b;
+}
+
+.book-cover {
+  display: flex;
+  margin-right: 1.5rem;
+  color: #7b7b7b;
+  padding-right: 2rem;
+  border-right: 1px solid #7b7b7b;
+}
+
+.book-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.availability-container {
+  display: flex;
+  justify-content: center;
+  background-color: #2a4a3c;
+  color: #f8f5ef;
+  font-family: 'DM Sans';
+  min-width: 6.875rem;
+}
+
+.not-available-container {
+  display: flex;
+  justify-content: center;
+  border: #c4906a 1px solid;
+  color: #c4906a;
+  font-family: 'DM Sans';
+  min-width: 6.875rem;
+}
+
+.cover-image {
+  width: 8.5rem;
+  height: 12rem;
+  margin-left: 1rem;
+}
+
+.book-details-container {
+  max-width: 700px;
+}
+
+.book-title {
+  font-family: 'Libre Baskerville';
+  font-size: 2rem;
+  color: #1c1917;
+}
+
+.book-details {
+  margin-top: 0.5rem;
+  font-family: 'DM Sans';
+  color: #7a7166;
+}
+
+.book-details-right-sec {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.book-detail-type {
+  color: #c4906a;
+  font-family: 'DM Sans';
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.book-detail-format {
+  color: #7b7b7b;
+  font-family: 'DM Sans';
+  font-size: 20px;
+}
+
+.btn-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.btn {
+  width: 145px;
+  height: 35px;
+  background-color: #2a4a3c;
+  color: #f8f5ef;
+  font-family: 'DM Sans';
+  font-weight: 300;
+  font-size: 16px;
+  border: none;
+}
+
+.upcoming-btn {
+  width: 145px;
+  height: 35px;
+  background-color: transparent;
+  border: #c4906a 1px solid;
+  color: #c4906a;
+  font-family: 'DM Sans';
+  font-weight: 300;
+  font-size: 16px;
+}

@@ -1,48 +1,107 @@
 /* You can add global styles to this file, and also import other style files */
+
 @font-face {
-    font-family: 'LondrinaShadow';
-    src: url("./assets/fonts/LondrinaShadow-Regular.ttf");
+  font-family: 'LondrinaShadow';
+  src: url("./assets/fonts/LondrinaShadow-Regular.ttf");
 }
 
 @font-face {
-    font-family: 'VastShadow';
-    src: url("./assets/fonts/VastShadow-Regular.ttf");
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'VastShadow';
+  src: url("./assets/fonts/VastShadow-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'OpenSansHebrewCondensed';
-    src: url("./assets/fonts/OpenSansHebrewCondensed-Regular.ttf");
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'OpenSansHebrewCondensed';
+  src: url("./assets/fonts/OpenSansHebrewCondensed-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
 }
 
 @font-face {
-    font-family: 'PhilosopherBold';
-    src: url("./assets/fonts/philosopher-font/Philosopher-Bold.ttf");
-    font-weight: bold;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'PhilosopherBold';
-    src: url("./assets/fonts/philosopher-font/Philosopher-BoldItalic.ttf");
-    font-weight: bold;
-    font-style: italic;
-}
-@font-face {
-    font-family: 'PhilosopherBold';
-    src: url("./assets/fonts/philosopher-font/Philosopher-Italic.ttf");
-    font-weight: regular;
-    font-style: italic;
-}
-@font-face {
-    font-family: 'PhilosopherRegular';
-    src: url("./assets/fonts/philosopher-font/Philosopher-Regular.ttf");
-    font-weight: normal;
-    font-style: normal;
+  font-family: 'PhilosopherBold';
+  src: url("./assets/fonts/philosopher-font/Philosopher-Bold.ttf");
+  font-weight: bold;
+  font-style: normal;
 }
 
-body, h1, h2, p, div{
-    margin: 0;
+@font-face {
+  font-family: 'PhilosopherBold';
+  src: url("./assets/fonts/philosopher-font/Philosopher-BoldItalic.ttf");
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'PhilosopherItalic';
+  src: url("./assets/fonts/philosopher-font/Philosopher-Italic.ttf");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'PhilosopherRegular';
+  src: url("./assets/fonts/philosopher-font/Philosopher-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DM Mono Regular';
+  src: url("./assets/fonts/DM_Mono/DMMono-Regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DM Mono Italic';
+  src: url("./assets/fonts/DM_Mono/DMMono-Italic.ttf");
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'DM Mono Light';
+  src: url("./assets/fonts/DM_Mono/DMMono-Light.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DM Mono Medium';
+  src: url("./assets/fonts/DM_Mono/DMMono-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  src: url("./assets/fonts/DM_Sans/DMSans-VariableFont.ttf");
+  font-weight: 100 1000;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DM Sans Italic';
+  src: url("./assets/fonts/DM_Sans/DMSans-Italic-VariableFont.ttf");
+  font-weight: 100 1000;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Libre Baskerville';
+  src: url("./assets/fonts/Libre_Baskerville/LibreBaskerville-VariableFont_wght.ttf");
+  font-weight: 100 1000;
+  font-style: normal;
+}
+
+body, h1, h2, h3, p, div {
+  margin: 0;
+}
+
+
+.numbers {
+  font-family: 'DM Mono Regular', monospace;
+  font-size: 20px;
 }
