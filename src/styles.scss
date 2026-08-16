@@ -105,3 +105,13 @@ body, h1, h2, h3, p, div {
   font-family: 'DM Mono Regular', monospace;
   font-size: 20px;
 }
+
+:root {
+  --background:      #F8F5EF;
+  --foreground:      #1C1917;
+  --card:            #F2EDE5;
+  --secondary:       #EAE4DA;
+  --muted-fg:        #7A7166;
+  --accent:          #C4906A;
+  --border:          rgba(28, 25, 23, 0.12);
+}

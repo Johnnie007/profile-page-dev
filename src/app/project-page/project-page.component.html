@@ -1,1 +1,57 @@
-<app-maintenance-page></app-maintenance-page>
+<div class="projects-table-wrapper">
+
+    <div class="header">
+        <h3 class="project-name">Engineering <br><span class="texture">Projects</span></h3>
+    </div>
+
+  <div class="table-scroll">
+    <table class="projects-table">
+      <thead>
+        <tr class="table-head-row">
+          <th>Project</th>
+          <th>Category</th>
+          <th>Stack</th>
+          <th>Year</th>
+          <th></th>
+        </tr>
+      </thead>
+    <tbody>
+        @for (project of projects; track project.id){
+        <tr class="table-row"
+          (click)="navigateToProject(project.link)"
+          (keydown.enter)="navigateToProject(project.link)"
+          role="button"
+          tabindex="0"
+          [attr.aria-label]="'View ' + project.name + ' project'"
+          >
+          <td class="col-project">
+            <div class="project-cell">
+              <div class="thumb">
+                <img src="assets/images/test.png" alt="" />
+              </div>
+              <span class="project-title">{{project.name}}</span>
+            </div>
+          </td>
+          <td class="col-category">{{project.category}}</td>
+          <td class="col-stack">
+            <div class="tags">
+              @for(tech of project.stack; track $index){
+                <span class="tag">{{tech}}</span>
+              }
+            </div>
+          </td>
+          <td class="col-year">{{project.yearDeployed | date: 'yyyy' }}</td>
+          <td class="col-arrow">
+            <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor"
+              stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="7" y1="17" x2="17" y2="7"/>
+              <polyline points="7 7 17 7 17 17"/>
+            </svg>
+          </td>
+        </tr>
+      }
+      </tbody>
+    </table>
+  </div>
+</div>
