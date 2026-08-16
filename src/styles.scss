@@ -48,7 +48,7 @@
 }
 
 @font-face {
-  font-family: 'DM Mono Regular';
+  font-family: 'DM Mono';
   src: url("./assets/fonts/DM_Mono/DMMono-Regular.ttf");
   font-weight: normal;
   font-style: normal;
@@ -102,7 +102,7 @@ body, h1, h2, h3, p, div {
 
 
 .numbers {
-  font-family: 'DM Mono Regular', monospace;
+  font-family: 'DM Mono', monospace;
   font-size: 20px;
 }
 
@@ -113,5 +113,6 @@ body, h1, h2, h3, p, div {
   --secondary:       #EAE4DA;
   --muted-fg:        #7A7166;
   --accent:          #C4906A;
+  --btn-green:       #2a4a3c;
   --border:          rgba(28, 25, 23, 0.12);
 }

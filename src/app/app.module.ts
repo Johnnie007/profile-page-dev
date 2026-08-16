@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomepageComponent } from './homepage/homepage.component';
+import { AboutPageComponent } from './about-page/about-page.component';
 import { SharedIconsModule } from './shared-icons.module';
 import { NavigationBarComponent } from './navigation-bar/navigation-bar.component';
 import { FooterComponent } from './footer/footer.component';
@@ -15,7 +15,7 @@ import { MaintenancePageComponent } from './maintenance-page/maintenance-page.co
 @NgModule({
   declarations: [
     AppComponent,
-    HomepageComponent,
+    AboutPageComponent,
     NavigationBarComponent,
     FooterComponent,
     ShoppingPageComponent,
