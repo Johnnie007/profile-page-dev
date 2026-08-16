@@ -6,7 +6,3 @@ export interface Project{
     link: string
     stack: string[]
 }
-
-interface Stack{
-    name: string
-}
