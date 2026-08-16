@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
-import { LucideWrench} from '@lucide/angular';
+import { LucideWrench, LucideExternalLink} from '@lucide/angular';
 
 @NgModule({
-  imports: [LucideWrench],
-  exports: [LucideWrench]
+  imports: [LucideWrench, LucideExternalLink],
+  exports: [LucideWrench, LucideExternalLink]
 })
 export class SharedIconsModule { }
