@@ -1,5 +1,5 @@
 <div class="projects-table-wrapper">
-
+  @if(projects$ | async; as projects){
     <div class="header">
         <h3 class="project-name">Engineering <br><span class="texture">Projects</span></h3>
     </div>
@@ -49,4 +49,5 @@
       </tbody>
     </table>
   </div>
+}
 </div>
