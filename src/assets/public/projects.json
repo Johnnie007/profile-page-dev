@@ -1,12 +1,12 @@
 [
-    {
-      "id": "1",
-      "name": "Footprint",
-      "category": "Design & Engineering",
-      "yearDeployed": "2021-07-20",
-      "link": "https://github.com/",
-      "stack": ["Angular", "Spring Boot", "Java", "Typescript"]
-    },
+  {
+    "id": "1",
+    "name": "Footprint",
+    "category": "Design & Engineering",
+    "yearDeployed": "2021-07-20",
+    "link": "https://github.com/",
+    "stack": ["Angular", "Spring Boot", "Java", "Typescript"]
+  },
      {
       "id": "2",
       "name": "Footprint",

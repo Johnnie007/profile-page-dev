@@ -1,4 +1,5 @@
-{"id": "1",
+{
+"id": "1",
 "seriesName": "Jessie's Journey's",
 "books":[{
     "id": "1",
@@ -33,4 +34,5 @@
       "isPublished": false,
       "publishedDate": "2027-12-31"
     }
-  }]}
+  }]
+}

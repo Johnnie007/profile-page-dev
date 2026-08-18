@@ -5,17 +5,17 @@ import { Observable } from 'rxjs';
 import { BookSeries } from '../models/book';
 
 @Service()
-export class RestServiceService {
-    private http = inject(HttpClient)
-    private projectsUrl="public/books.json";
-    private booksUrl="public/projects.json";
+export class RestService {
+    private readonly http = inject(HttpClient);
+    private readonly projectsUrl="assets/public/projects.json";
+    private readonly booksUrl="assets/public/books.json";
     
     getProjects(): Observable<Project[]>{
         return this.http.get<Project[]>(this.projectsUrl);
     }
 
-    getBooks(): Observable<BookSeries[]>{
-        return this.http.get<BookSeries[]>(this.booksUrl);
+    getBooks(): Observable<BookSeries>{
+        return this.http.get<BookSeries>(this.booksUrl);
     }
 }
 
