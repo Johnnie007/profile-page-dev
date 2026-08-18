@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { BookSeries } from '../models/book';
 import { RestService } from '../rest-service/rest.service';
 import { Observable } from 'rxjs';

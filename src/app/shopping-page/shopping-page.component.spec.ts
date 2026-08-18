@@ -2,7 +2,6 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ShoppingPageComponent } from './shopping-page.component';
 import { MaintenancePageComponent } from '../maintenance-page/maintenance-page.component';
-import { SharedIconsModule } from '../shared-icons.module';
 import { LucideWrench } from '@lucide/angular';
 
 describe('ShoppingPageComponent', () => {

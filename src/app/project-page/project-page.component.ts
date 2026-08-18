@@ -1,4 +1,4 @@
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Project } from '../models/projects';
 import { RestService } from '../rest-service/rest.service';
 import { Observable } from 'rxjs';
