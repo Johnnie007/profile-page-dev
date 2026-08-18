@@ -40,7 +40,7 @@ jobs:
         run: cp dist/profile-page/browser/index.html dist/profile-page/browser/404.html
 
       - name: Upload Artifacts
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v5
         with:
           path: './dist/profile-page/browser'
 
