@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MaintenancePageComponent } from './maintenance-page.component';
+import { LucideWrench } from '@lucide/angular';
 
 describe('MaintenancePageComponent', () => {
   let component: MaintenancePageComponent;
@@ -8,7 +9,8 @@ describe('MaintenancePageComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [MaintenancePageComponent]
+      declarations: [MaintenancePageComponent],
+      imports:[LucideWrench]
     })
     .compileComponents();
 
