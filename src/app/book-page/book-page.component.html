@@ -45,12 +45,12 @@
 
         @if (book.published.isPublished) {
           <div class="btn-container">
-            <button type="button" class="btn">Order Now: {{ book.price }}</button>
-            <button type="button" class="btn">PDF Version: Free</button>
+            <a class="btn" routerLink="/projects">More Info <svg class="info-icon" lucideInfo size="16" color="#F2EDE5"></svg></a>
+            <a class="btn" routerLink="/projects">PDF Version: Free</a>
           </div>
         } @else {
           <div class="btn-container">
-            <button type="button" class="upcoming-btn">Upcoming</button>
+            <a class="upcoming-btn" routerLink="/projects">More Info <svg class="info-icon" lucideInfo size="16" color="#C4906A"></svg></a>
           </div>
         }
       </div>

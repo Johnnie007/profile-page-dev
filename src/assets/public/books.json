@@ -4,25 +4,24 @@
 "books":[{
     "id": "1",
     "title": "Jessie to the Land of Flowers",
-    "details": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.",
+    "details": "Jessie's mother randomly falls into a coma to a rare sickness. The only way to help her is to find the Lilac and Dilia flowers that have the key medicinal properties that would cure her sickness. Unfortunately, the flowers are in the {Town} which is nickname land of flowers. So, Jessie and his friends Lucas and Rayna have to track through some of the most dangerous areas to get the Laurin Town in time to save his mother. Throughout journey Jessie, Rayna, and Lucas learn the importance of collaboration trust and forgivness.",
     "format": "Paperback/Digital",
     "price": "$5.99",
     "inventory": 0,
     "printToOrderLink": null,
     "pdfVersion": null,
-    "pages": 200,
+    "pages": null,
     "image": null,
     "category": "Children's Chapter Book",
     "published": {
-      "isPublished": true,
-      "publishedDate": "2026-10-01"
+      "isPublished": false,
+      "publishedDate": "2026-10-07"
     }
   },
   {
     "id": "2",
     "title": "Jessie and the Two Kings",
-    "details": "Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat\n        In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent \n        taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.",
-    "format": "Paperback/Digital",
+    "details": "Natural disasters are becoming more frequent and unpredictable throughout the world. More and more people are fleeing their homes to find a better place to call home. The disasters are continuing to happen in strange places and Jessie, Lucas, Rayna, and Zeke suspect something is going on to create an unbalance. So, they set out to find answers and to put a stop to it once and for all.",
     "price": "$5.99",
     "inventory": 0,
     "printToOrderLink": null,

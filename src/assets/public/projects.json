@@ -1,34 +1,29 @@
 [
   {
-    "id": "1",
-    "name": "Footprint",
-    "category": "Design & Engineering",
-    "yearDeployed": "2021-07-20",
-    "link": "https://github.com/",
-    "stack": ["Angular", "Spring Boot", "Java", "Typescript"]
+      "id": "1",
+      "name": "Footprint",
+      "category": "Design & Engineering",
+      "yearDeployed": "2023-11-19",
+      "link": "https://johnnie007.github.io/FootPrintV2Frontend/#/",
+      "stack": ["Angular", "Spring Boot", "Java", "Typescript"],
+      "image": "assets/images/footprint.png"
   },
-     {
-      "id": "2",
-      "name": "Footprint",
-      "category": "Design & Engineering",
-      "yearDeployed": "2021-07-20",
-      "link": "https://github.com/",
-      "stack": ["Angular", "Spring Boot", "Java", "Typescript"]
-    },
-     {
-      "id": "3",
-      "name": "Footprint",
-      "category": "Design & Engineering",
-      "yearDeployed": "2021-07-20",
-      "link": "https://github.com/",
-      "stack": ["Angular", "Spring Boot", "Java", "Typescript"]
-    },
-     {
-      "id": "4",
-      "name": "Footprint",
-      "category": "Design & Engineering",
-      "yearDeployed": "2021-07-20",
-      "link": "https://github.com/",
-      "stack": ["Angular", "Spring Boot", "Java", "Typescript"]
-    }
-  ]
+  {
+    "id": "2",
+    "name": "Country REST API",
+    "category": "Design & Engineering",
+    "yearDeployed": "2021-08-25",
+    "link": "https://johnnie007.github.io/CountryRESTAPI/",
+    "stack": ["NodeJS", "Javascript", "ExpressJS"],
+    "image": "assets/images/api.png"
+  },
+    {
+    "id": "3",
+    "name": "Mosaic Me",
+    "category": "Design & Engineering",
+    "yearDeployed": "2021-06-20",
+    "link": "https://johnnie007.github.io/mosaic-me/#/",
+    "stack": ["React", "Javascript"],
+    "image": "assets/images/mosaicMe.png"
+  }
+]
