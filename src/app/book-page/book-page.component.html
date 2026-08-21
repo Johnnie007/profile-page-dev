@@ -1,0 +1,60 @@
+<div class="books-container">
+  @if(bookSeries$ | async; as bookSeries){
+  <div class="title-header">
+    <h3 class="header-left">
+      Writings<br/>
+      <span class="texture">Books</span>
+    </h3>
+    <h1 class="header-right">{{ bookSeries.seriesName }}</h1>
+  </div>
+
+  @for (book of bookSeries.books; track book.id) {
+    <div class="book-section">
+      <div class="book-cover">
+        <div class="book-info-container">
+          <p class="numbers">{{ getPublishedYear(book.published.publishedDate) }}</p>
+
+          @if (book.published.isPublished) {
+            <div class="availability-container">
+              <p>Available Now</p>
+            </div>
+          } @else {
+            <div class="not-available-container">
+              <p>Upcoming</p>
+            </div>
+          }
+
+          @if (book.pages != null) {
+            <p class="numbers">{{ book.pages }}</p>
+          }
+        </div>
+
+        <img class="cover-image" src="assets/images/test.png" alt="" />
+      </div>
+
+      <div class="book-details-container">
+        <h3 class="book-title">{{ book.title }}</h3>
+        <p class="book-details">{{ book.details }}</p>
+      </div>
+
+      <div class="book-details-right-sec">
+        <div class="format-container">
+          <p class="book-detail-type">{{ book.category }}</p>
+          <p class="book-detail-format">Format: {{ book.format }}</p>
+        </div>
+
+        @if (book.published.isPublished) {
+          <div class="btn-container">
+            <a class="btn" routerLink="/projects">More Info <svg class="info-icon" lucideInfo size="16" color="#F2EDE5"></svg></a>
+            <a class="btn" routerLink="/projects">PDF Version: Free</a>
+          </div>
+        } @else {
+          <div class="btn-container">
+            <a class="upcoming-btn" routerLink="/projects">More Info <svg class="info-icon" lucideInfo size="16" color="#C4906A"></svg></a>
+          </div>
+        }
+      </div>
+    </div>
+  }
+}
+</div>
