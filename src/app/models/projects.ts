@@ -3,6 +3,7 @@ export interface Project{
     name: string,
     category: string,
     yearDeployed: Date,
-    link: string
-    stack: string[]
+    link: string,
+    stack: string[],
+    image: string
 }

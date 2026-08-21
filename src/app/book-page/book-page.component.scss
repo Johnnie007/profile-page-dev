@@ -1,6 +1,6 @@
 .books-container {
   background-color: #f8f5ef;
-  min-height: 80vh;
+  min-height: 90vh;
 }
 .title-header {
   display: flex;
@@ -120,6 +120,10 @@
 }
 
 .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
   width: 145px;
   height: 35px;
   background-color: #2a4a3c;
@@ -131,12 +135,20 @@
 }
 
 .upcoming-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
   width: 145px;
   height: 35px;
   background-color: transparent;
-  border: #c4906a 1px solid;
-  color: #c4906a;
+  border: #C4906a 1px solid;
+  color: #C4906a;
   font-family: 'DM Sans';
   font-weight: 300;
   font-size: 16px;
+}
+
+.info-icon{
+  margin-left: 0.5rem;
 }
