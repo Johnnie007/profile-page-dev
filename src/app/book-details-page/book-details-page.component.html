@@ -1,45 +1,44 @@
-<div class="book-details-page-container">
-   <div class="header">
-        <h3 class="book-details-page-header">Writings <br><span class="texture">Books</span></h3>
+@if (book) {
+  <div class="book-details-page-container">
+    <div class="header">
+      <h3 class="book-details-page-header">Writings <br><span class="texture">Books</span></h3>
     </div>
-        <!-- Book Cover Container --LEFT -->
+
     <div class="book-container">
-        <div class="book-image-container">
-            <img class="book-cover" src="assets/images/test.png" alt="">
-            <div class="availability-container">
-                @if(false){
-                <div class="available">
-                    <p>Available Now</p>
-                </div>
-                }@else{
-                <div class="forthcoming">
-                    <p>Forthcoming</p>
-                </div> 
-            }
+      <div class="book-image-container">
+        <img class="book-cover" src="assets/images/test.png" alt="">
+        <div class="availability-container">
+          @if (book.published.isPublished) {
+            <div class="available">
+              <p>Available Now</p>
             </div>
+          } @else {
+            <div class="forthcoming">
+              <p>Forthcoming</p>
+            </div>
+          }
         </div>
-        <!-- Details Container -->
-        <div class="book-details-container">
-            <div class="book-title">
-                <h1>Jessie to the Land of Flowers</h1>
-            </div>
-            <div class="book-details">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
-                </p>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad litora torquent per conubia nostra inceptos himenaeos.
-                </p>
-                @if(false){
-                    <div class="purchase-btn-container">
-                        <a class="btn-dark" href="">Order $5.99</a>
-                        <a class="btn-outline" href="">PDF Version</a>
-                    </div>
-                }
-                @else{
-                    <a class="btn-outline-release" href="">Release Date: 10-07-2026</a>
-                }
-            </div>
+      </div>
+
+      <div class="book-details-container">
+        <div class="book-title">
+          <h1>{{ book.title }}</h1>
         </div>
+
+        <div class="book-details">
+          <p>{{ book.details }}</p>
+          <p>{{ book.details }}</p>
+
+          @if (book.published.isPublished) {
+            <div class="purchase-btn-container">
+              <a class="btn-dark" href="">Order {{ book.price }}</a>
+              <a class="btn-outline" href="">PDF Version</a>
+            </div>
+          } @else {
+            <p class="btn-outline-release">Release Date: {{ book.published.publishedDate | date:'MM-dd-yyyy' }}</p>
+          }
+        </div>
+      </div>
     </div>
-</div>
+  </div>
+}

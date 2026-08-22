@@ -4,7 +4,7 @@ export interface BookSeries{
     books: Book[]
 }
 
-interface Book {
+export interface Book {
     id: string,
     title: string
     category: string,
