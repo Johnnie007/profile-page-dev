@@ -6,7 +6,7 @@
 
     <div class="book-container">
       <div class="book-image-container">
-        <img class="book-cover" src="assets/images/test.png" alt="">
+        <img class="book-cover" [src]="book.cover" alt="">
         <div class="availability-container">
           @if (book.published.isPublished) {
             <div class="available">
@@ -32,6 +32,7 @@
           @if (book.published.isPublished) {
             <div class="purchase-btn-container">
               <a class="btn-dark" href="">Order {{ book.price }}</a>
+              <!-- TODO: PDF Version needs to open a separate window of PDF Version -->
               <a class="btn-outline" href="">PDF Version</a>
             </div>
           } @else {

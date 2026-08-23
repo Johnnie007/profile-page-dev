@@ -5,6 +5,7 @@ import { ShoppingPageComponent } from './shopping-page/shopping-page.component';
 import { ProjectPageComponent } from './project-page/project-page.component';
 import { BookPageComponent } from './book-page/book-page.component';
 import { BookDetailsPageComponent } from './book-details-page/book-details-page.component';
+import { bookDetailsResolver } from './book-details-page/book-details.resolver';
 
 const routes: Routes = [
   {
@@ -23,14 +24,19 @@ const routes: Routes = [
     title:"Books"
   },
   {
-    path: 'details/:id',
+    path: ':bookseries/:id',
     component: BookDetailsPageComponent,
-    title:"Books Details"
+    title:"Books Details",
+    resolve: { book: bookDetailsResolver }
   },
   {
     path: 'shop',
     component: ShoppingPageComponent,
     title:"Shop"
+  },
+  { 
+    path: '**',
+    redirectTo: '' 
   }
 ];
 

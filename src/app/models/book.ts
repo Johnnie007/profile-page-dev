@@ -15,7 +15,7 @@ export interface Book {
     printToOrderLink: string | null,
     pdfVersion: string | null,
     pages: number | null,
-    image: string | null,
+    cover: string | null,
     published: Published
 }
 
