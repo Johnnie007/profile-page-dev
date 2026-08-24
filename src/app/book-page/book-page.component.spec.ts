@@ -1,9 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { provideHttpClient } from '@angular/common/http';
 import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
-
 import { BookPageComponent } from './book-page.component';
-import { provideRouter } from '@angular/router';
 
 describe('BookPageComponent', () => {
   let component: BookPageComponent;

@@ -1,7 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { BookDetailsPageComponent } from './book-details-page.component';
-import { RouterTestingModule } from '@angular/router/testing';
 import { provideRouter } from '@angular/router';
 
 describe('BookDetailsPageComponent', () => {
