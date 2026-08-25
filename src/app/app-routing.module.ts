@@ -6,6 +6,7 @@ import { ProjectPageComponent } from './project-page/project-page.component';
 import { BookPageComponent } from './book-page/book-page.component';
 import { BookDetailsPageComponent } from './book-details-page/book-details-page.component';
 import { bookDetailsResolver } from './book-details-page/book-details.resolver';
+import { BookRouteGuard } from './guards/book-route.guard';
 
 const routes: Routes = [
   {
@@ -27,7 +28,8 @@ const routes: Routes = [
     path: ':bookseries/:id',
     component: BookDetailsPageComponent,
     title:"Books Details",
-    resolve: { book: bookDetailsResolver }
+    resolve: { book: bookDetailsResolver },
+    canActivate: [BookRouteGuard]
   },
   {
     path: 'shop',
