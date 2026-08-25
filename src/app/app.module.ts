@@ -11,6 +11,7 @@ import { ShoppingPageComponent } from './shopping-page/shopping-page.component';
 import { BookPageComponent } from './book-page/book-page.component';
 import { ProjectPageComponent } from './project-page/project-page.component';
 import { MaintenancePageComponent } from './maintenance-page/maintenance-page.component';
+import { BookDetailsPageComponent } from './book-details-page/book-details-page.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { MaintenancePageComponent } from './maintenance-page/maintenance-page.co
     ShoppingPageComponent,
     BookPageComponent,
     ProjectPageComponent,
-    MaintenancePageComponent
+    MaintenancePageComponent,
+    BookDetailsPageComponent
   ],
   imports: [
     BrowserModule,

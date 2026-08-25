@@ -4,6 +4,9 @@ import { AboutPageComponent } from './about-page/about-page.component';
 import { ShoppingPageComponent } from './shopping-page/shopping-page.component';
 import { ProjectPageComponent } from './project-page/project-page.component';
 import { BookPageComponent } from './book-page/book-page.component';
+import { BookDetailsPageComponent } from './book-details-page/book-details-page.component';
+import { BookDetailsResolver } from './book-details-page/book-details.resolver';
+import { BookRouteGuard } from './guards/book-route.guard';
 
 const routes: Routes = [
   {
@@ -22,9 +25,20 @@ const routes: Routes = [
     title:"Books"
   },
   {
+    path: ':bookTitle/:id',
+    component: BookDetailsPageComponent,
+    title:"Books Details",
+    resolve: { book: BookDetailsResolver },
+    canActivate: [BookRouteGuard]
+  },
+  {
     path: 'shop',
     component: ShoppingPageComponent,
     title:"Shop"
+  },
+  { 
+    path: '**',
+    redirectTo: '' 
   }
 ];
 

@@ -11,7 +11,7 @@
     "printToOrderLink": null,
     "pdfVersion": null,
     "pages": null,
-    "image": null,
+    "cover": "assets/images/test.png",
     "category": "Children's Chapter Book",
     "published": {
       "isPublished": false,
@@ -22,16 +22,17 @@
     "id": "2",
     "title": "Jessie and the Two Kings",
     "details": "Natural disasters are becoming more frequent and unpredictable throughout the world. More and more people are fleeing their homes to find a better place to call home. The disasters are continuing to happen in strange places and Jessie, Lucas, Rayna, and Zeke suspect something is going on to create an unbalance. So, they set out to find answers and to put a stop to it once and for all.",
+    "format": "Digital",
     "price": "$5.99",
     "inventory": 0,
     "printToOrderLink": null,
     "pdfVersion": null,
     "pages": null,
-    "image": null,
+    "cover": "assets/images/test.png",
     "category": "Children's Chapter Book",
     "published": {
       "isPublished": false,
-      "publishedDate": "2027-12-31"
+      "publishedDate": "2027-11-07"
     }
   }]
 }

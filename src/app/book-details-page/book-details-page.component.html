@@ -1,0 +1,45 @@
+@if (book) {
+  <div class="book-details-page-container">
+    <div class="header">
+      <h3 class="book-details-page-header">Writings <br><span class="texture">Books</span></h3>
+    </div>
+
+    <div class="book-container">
+      <div class="book-image-container">
+        <img class="book-cover" [src]="book.cover" alt="">
+        <div class="availability-container">
+          @if (book.published.isPublished) {
+            <div class="available">
+              <p>Available Now</p>
+            </div>
+          } @else {
+            <div class="forthcoming">
+              <p>Forthcoming</p>
+            </div>
+          }
+        </div>
+      </div>
+
+      <div class="book-details-container">
+        <div class="book-title">
+          <h1>{{ book.title }}</h1>
+        </div>
+
+        <div class="book-details">
+          <p>{{ book.details }}</p>
+          <p>{{ book.details }}</p>
+
+          @if (book.published.isPublished) {
+            <div class="purchase-btn-container">
+              <a class="btn-dark" href="">Order {{ book.price }}</a>
+              <!-- TODO: PDF Version needs to open a separate window of PDF Version -->
+              <a class="btn-outline" href="">PDF Version</a>
+            </div>
+          } @else {
+            <p class="btn-outline-release">Release Date: {{ book.published.publishedDate | date:'MM-dd-yyyy' }}</p>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+}

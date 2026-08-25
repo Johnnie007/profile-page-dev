@@ -4,7 +4,7 @@ export interface BookSeries{
     books: Book[]
 }
 
-interface Book {
+export interface Book {
     id: string,
     title: string
     category: string,
@@ -15,7 +15,7 @@ interface Book {
     printToOrderLink: string | null,
     pdfVersion: string | null,
     pages: number | null,
-    image: string | null,
+    cover: string | null,
     published: Published
 }
 

@@ -29,7 +29,7 @@
           }
         </div>
 
-        <img class="cover-image" src="assets/images/test.png" alt="" />
+        <img class="cover-image" [src]=book.cover alt="" />
       </div>
 
       <div class="book-details-container">
@@ -45,12 +45,13 @@
 
         @if (book.published.isPublished) {
           <div class="btn-container">
-            <a class="btn" routerLink="/projects">More Info <svg class="info-icon" lucideInfo size="16" color="#F2EDE5"></svg></a>
-            <a class="btn" routerLink="/projects">PDF Version: Free</a>
+            <a class="btn" [routerLink]="['/details', book.id]">More Info <svg class="info-icon" lucideInfo size="16" color="#F2EDE5"></svg></a>
+            <!-- TODO: Add Pop-up Window with the option to download PDF -->
+            <a class="btn" routerLink="/details">PDF Version: Free</a>
           </div>
         } @else {
           <div class="btn-container">
-            <a class="upcoming-btn" routerLink="/projects">More Info <svg class="info-icon" lucideInfo size="16" color="#C4906A"></svg></a>
+            <a class="upcoming-btn" [routerLink]="['', globalService.convertUrlString(book.title) , book.id]">More Info <svg class="info-icon" lucideInfo size="16" color="#C4906A"></svg></a>
           </div>
         }
       </div>
