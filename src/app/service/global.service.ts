@@ -17,9 +17,9 @@ export class GlobalService{
         .replace(/^-+|-+$/g, ''); 
     }
 
-    getBooksById(id: string): Observable<Book | undefined>{
+    getBooksById(id: string): Observable<Book | null>{
         return this.restService.getBooks().pipe(
-            map(series => series.books.find(book => book.id === id))
+            map(series => series.books.find(book => book.id === id) ?? null)
         );
     }
 

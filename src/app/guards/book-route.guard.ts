@@ -10,13 +10,14 @@ export const BookRouteGuard: CanActivateFn = (route) => {
   const bookTitle = route.paramMap.get("bookTitle");
   const bookId = route.paramMap.get('id');
   const idAsNumber = Number(bookId);
-
+  
   if(!bookTitle || isNaN(idAsNumber) || bookId == null){
     router.navigate(['/'])
     return false;
   }
   return globalService.validateBookDetailsRoute(bookTitle, bookId).pipe(
     map((isValid) => {
+      console.log(isValid)
       if(isValid) {
         return true;
       }else{
