@@ -35,7 +35,7 @@ describe('BookPageComponent', () => {
 
   it('should return year only from Date', ()=>{
     const date = new Date('10-10-2010');
-    let yearFromDate = component.getPublishedYear(date);
+    const yearFromDate = component.getPublishedYear(date);
 
     expect(yearFromDate).toBe('2010')
   });
