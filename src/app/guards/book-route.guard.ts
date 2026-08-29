@@ -17,7 +17,6 @@ export const BookRouteGuard: CanActivateFn = (route) => {
   }
   return globalService.validateBookDetailsRoute(bookTitle, bookId).pipe(
     map((isValid) => {
-      console.log(isValid)
       if(isValid) {
         return true;
       }else{

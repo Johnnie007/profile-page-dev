@@ -32,4 +32,11 @@ describe('BookPageComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should return year only from Date', ()=>{
+    const date = new Date('10-10-2010');
+    const yearFromDate = component.getPublishedYear(date);
+
+    expect(yearFromDate).toBe('2010')
+  });
 });
