@@ -11,8 +11,8 @@ import { GlobalService } from '../service/global.service';
   styleUrl: './book-page.component.scss',
 })
 export class BookPageComponent{
-  public readonly globalService = inject(GlobalService);
-  private readonly restService = inject(RestService);
+  readonly globalService = inject(GlobalService); //used in html
+  readonly restService = inject(RestService);
 
   bookSeries$: Observable<BookSeries> = this.restService.getBooks();
 

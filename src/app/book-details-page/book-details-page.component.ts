@@ -17,6 +17,5 @@ export class BookDetailsPageComponent implements OnInit {
   ngOnInit(): void {
     const resolvedBook = this.route.snapshot.data['book'] as Book | null;
     this.book = resolvedBook ?? null;
-    console.log('selected book', this.book);
   }
 }
