@@ -1,0 +1,38 @@
+{
+"id": "1",
+"seriesName": "Jessie's Journey's",
+"books":[{
+    "id": "1",
+    "title": "Jessie to the Land of Flowers",
+    "details": "Book #1 in the series. Jessie is in a race against time to find the Dahlia and Lilac flowers to make a much-needed medicine to save his mother, who fell into a coma. Jessie and his friends Rayna and Lucas travel through some of the most mysterious and unknown parts of the world to get to Laurin Town, better known as The Land of Flowers. Throughout their journey, they learn the importance of trust, forgiveness, and collaboration.",
+    "format": "Paperback/Digital",
+    "price": null,
+    "inventory": 0,
+    "printToOrderLink": null,
+    "pdfVersion": null,
+    "pages": null,
+    "cover": "assets/images/placeholder-one.png",
+    "category": "Children's Chapter Book",
+    "published": {
+      "isPublished": false,
+      "publishedDate": "2026-10-20"
+    }
+  },
+  {
+    "id": "2",
+    "title": "Jessie and the Two Kings",
+    "details": "Natural disasters are becoming more frequent and unpredictable throughout the world. More and more people of all kinds are fleeing their homes to Mountain High Kingdom. Jessie and his friends suspect something unusual is going on, so they set off to find answers.",
+    "format": "Digital",
+    "price": null,
+    "inventory": 0,
+    "printToOrderLink": null,
+    "pdfVersion": null,
+    "pages": null,
+    "cover": "assets/images/placeholder-two.jpg",
+    "category": "Children's Chapter Book",
+    "published": {
+      "isPublished": false,
+      "publishedDate": "2027-11-07"
+    }
+  }]
+}
