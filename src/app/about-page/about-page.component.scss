@@ -16,10 +16,13 @@
 .title-text{
     font-size: 48px;
     margin-top: 2rem;
+    font-family: 'Libre Baskerville';
 }
 
 .title-texture{
     color: var(--accent);
+    font-family: 'Libre Baskerville';
+    font-style: italic;
 }
 
 .separator{
@@ -28,11 +31,16 @@
     margin: 3rem 0;
 }
 
-.page-details{
+.page-details, .subtext{
     width: 700px;
     font-family: 'DM Sans';
-    font-size: 1.5rem;
+    font-size: 1.375rem;
+    text-align: center;
     color: var(--muted-fg);
+}
+.subtext-details{
+    font-size: 1rem;
+    margin: 1.5rem;
 }
 
 .page-buttons{
