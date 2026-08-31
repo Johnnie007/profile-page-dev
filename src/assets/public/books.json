@@ -4,31 +4,31 @@
 "books":[{
     "id": "1",
     "title": "Jessie to the Land of Flowers",
-    "details": "Jessie's mother randomly falls into a coma to a rare sickness. The only way to help her is to find the Lilac and Dilia flowers that have the key medicinal properties that would cure her sickness. Unfortunately, the flowers are in the {Town} which is nickname land of flowers. So, Jessie and his friends Lucas and Rayna have to track through some of the most dangerous areas to get the Laurin Town in time to save his mother. Throughout journey Jessie, Rayna, and Lucas learn the importance of collaboration trust and forgivness.",
+    "details": "Book #1 in the series. Jessie is in a race against time to find the Dahlia and Lilac flowers to make a much-needed medicine to save his mother, who fell into a coma. Jessie and his friends Rayna and Lucas travel through some of the most mysterious and unknown parts of the world to get to Laurin Town, better known as The Land of Flowers. Throughout their journey, they learn the importance of trust, forgiveness, and collaboration.",
     "format": "Paperback/Digital",
-    "price": "$5.99",
+    "price": null,
     "inventory": 0,
     "printToOrderLink": null,
     "pdfVersion": null,
     "pages": null,
-    "cover": "assets/images/test.png",
+    "cover": "assets/images/placeholder-one.png",
     "category": "Children's Chapter Book",
     "published": {
       "isPublished": false,
-      "publishedDate": "2026-10-07"
+      "publishedDate": "2026-10-20"
     }
   },
   {
     "id": "2",
     "title": "Jessie and the Two Kings",
-    "details": "Natural disasters are becoming more frequent and unpredictable throughout the world. More and more people are fleeing their homes to find a better place to call home. The disasters are continuing to happen in strange places and Jessie, Lucas, Rayna, and Zeke suspect something is going on to create an unbalance. So, they set out to find answers and to put a stop to it once and for all.",
+    "details": "Natural disasters are becoming more frequent and unpredictable throughout the world. More and more people of all kinds are fleeing their homes to Mountain High Kingdom. Jessie and his friends suspect something unusual is going on, so they set off to find answers.",
     "format": "Digital",
-    "price": "$5.99",
+    "price": null,
     "inventory": 0,
     "printToOrderLink": null,
     "pdfVersion": null,
     "pages": null,
-    "cover": "assets/images/test.png",
+    "cover": "assets/images/placeholder-two.jpg",
     "category": "Children's Chapter Book",
     "published": {
       "isPublished": false,
