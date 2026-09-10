@@ -31,11 +31,11 @@
     "@angular/compiler-cli": "^22.0.8",
     "@types/node": "^26.1.2",
     "@typescript-eslint/eslint-plugin": "^8.66.0",
-    "@vitest/browser": "^4.1.10",
+    "@vitest/browser": "^4.1.11",
     "inquirer": "^14.0.2",
     "istanbul-lib-instrument": "^6.0.3",
     "jsdom": "^30.0.0",
     "typescript": "~6.0.3",
-    "vitest": "^4.1.10"
+    "vitest": "^4.1.11"
   }
 }
