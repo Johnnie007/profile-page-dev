@@ -1,16 +1,28 @@
 import { TestBed } from '@angular/core/testing';
 import { provideHttpClientTesting, HttpTestingController } from '@angular/common/http/testing';
+import { provideHttpClient } from '@angular/common/http';
 import { RestService } from './rest.service';
-import { BookSeries } from '../models/book';
-import { Project } from '../models/projects';
+import { ClientData } from '../models/clientData';
+import { environment } from '../../environments/environment';
 
 describe('RestServiceService', () => {
   let service: RestService;
   let httpTesting: HttpTestingController;
+  const clientData: ClientData = {
+    userDetails: {
+      id: 'user-1',
+      firstName: 'Test',
+      lastName: 'User',
+      mainText: 'Main',
+      subText: 'Sub',
+    },
+    projects: [],
+    books: [],
+  };
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [provideHttpClientTesting()],
+      providers: [provideHttpClient(), provideHttpClientTesting()],
     });
     service = TestBed.inject(RestService);
     httpTesting = TestBed.inject(HttpTestingController);
@@ -22,43 +34,15 @@ describe('RestServiceService', () => {
     expect(service).toBeTruthy();
   });
 
-  it('should return projects from the projects endpoint', () => {
-    const projects: Project[] = [
-      {
-        id: '1',
-        name: 'Profile Page',
-        category: 'Web',
-        yearDeployed: new Date('2024-01-01'),
-        link: 'https://example.com',
-        stack: ['Angular'],
-        image: 'profile-page.png',
-      },
-    ];
-    let result: Project[] | undefined;
+  it('should return the client data from the configured endpoint', () => {
+    let result: ClientData | undefined;
 
-    service.getProjects().subscribe(projectsValue => result = projectsValue);
+    service.getClientDetails().subscribe(value => result = value);
 
-    const request = httpTesting.expectOne('assets/public/projects.json');
+    const request = httpTesting.expectOne(environment.clientUrl);
     expect(request.request.method).toBe('GET');
-    request.flush(projects);
+    request.flush(clientData);
 
-    expect(result).toEqual(projects);
-  });
-
-  it('should return books from the books endpoint', () => {
-    const bookSeries: BookSeries = {
-      id: 'series-1',
-      seriesName: 'Test Series',
-      books: [],
-    };
-    let result: BookSeries | undefined;
-
-    service.getBooks().subscribe(bookSeriesValue => result = bookSeriesValue);
-
-    const request = httpTesting.expectOne('assets/public/books.json');
-    expect(request.request.method).toBe('GET');
-    request.flush(bookSeries);
-
-    expect(result).toEqual(bookSeries);
+    expect(result).toEqual(clientData);
   });
 });
