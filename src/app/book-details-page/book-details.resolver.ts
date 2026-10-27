@@ -8,6 +8,7 @@ export const BookDetailsResolver: ResolveFn<Book | null> = (
 ) => {
   const globalService = inject(GlobalService);
   const id = route.paramMap.get('id');
+
   if (!id) {
     return null;
   }

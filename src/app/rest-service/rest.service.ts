@@ -10,9 +10,6 @@ export class RestService {
     private readonly clientUrl = environment.clientUrl;
 
     private readonly clientData$ = this.http.get<ClientData>(this.clientUrl).pipe(
-        tap(x =>{
-            console.log(x)
-        }),
         shareReplay({ bufferSize: 1, refCount: true })
     )
 

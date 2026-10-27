@@ -6,7 +6,7 @@
 
     <div class="book-container">
       <div class="book-image-container">
-        <img class="book-cover" [src]="book.coverImage" alt="">
+        <img class="book-cover" [src]="book.coverImage?.secure_url" alt="">
         <div class="availability-container">
           @if (book.publishData.isPublished) {
             <div class="available">

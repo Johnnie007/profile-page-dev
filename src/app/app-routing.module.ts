@@ -31,11 +31,11 @@ const routes: Routes = [
     resolve: { book: BookDetailsResolver },
     canActivate: [BookRouteGuard]
   },
-  {
-    path: 'shop',
-    component: ShoppingPageComponent,
-    title:"Shop"
-  },
+  // {
+  //   path: 'shop',
+  //   component: ShoppingPageComponent,
+  //   title:"Shop"
+  // },
   { 
     path: '**',
     redirectTo: '' 

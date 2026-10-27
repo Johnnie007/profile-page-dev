@@ -11,6 +11,7 @@ import { BookRouteGuard } from './book-route.guard';
 import { GlobalService } from '../service/global.service';
 
 describe('BookRouteGuard', () => {
+  const bookId = 'ae58c84f-1261-4b14-89fa-1a0365ab1372';
   const executeGuard = (route: ActivatedRouteSnapshot) =>
     TestBed.runInInjectionContext(() =>
       BookRouteGuard(route, {} as RouterStateSnapshot)
@@ -49,15 +50,15 @@ describe('BookRouteGuard', () => {
     } as ActivatedRouteSnapshot;
   }
 
-  it('should redirect and deny access when parameters are invalid', () => {
-    const result = executeGuard(createRoute('book-title', 'not-a-number'));
+  it('should redirect and deny access when the book ID is not a UUID', () => {
+    const result = executeGuard(createRoute('book-title', 'not-a-uuid'));
 
     expect(result).toBe(false);
     expect(navigations).toEqual([['/']]);
   });
 
   it('should allow access when the book route is valid', async () => {
-    const result = executeGuard(createRoute('book-title', '1'));
+    const result = executeGuard(createRoute('book-title', bookId));
 
     expect(await firstValueFrom(result as Observable<boolean>)).toBe(true);
     expect(navigations).toEqual([]);
@@ -66,7 +67,7 @@ describe('BookRouteGuard', () => {
   it('should redirect when the book route is invalid', async () => {
     validationResult = of(undefined);
 
-    const result = executeGuard(createRoute('book-title', '1'));
+    const result = executeGuard(createRoute('book-title', bookId));
 
     expect(await firstValueFrom(result as Observable<boolean>)).toBe(false);
     expect(navigations).toEqual([['/']]);
@@ -75,7 +76,7 @@ describe('BookRouteGuard', () => {
   it('should redirect when validating the book route fails', async () => {
     validationResult = throwError(() => new Error('request failed'));
 
-    const result = executeGuard(createRoute('book-title', '1'));
+    const result = executeGuard(createRoute('book-title', bookId));
 
     expect(await firstValueFrom(result as Observable<boolean>)).toBe(false);
     expect(navigations).toEqual([['/']]);

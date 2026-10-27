@@ -10,8 +10,15 @@ export interface Book {
     printToOrder: string | null,
     pdf: string | null,
     numOfPages: number | null,
-    coverImage: string | null,
+    coverImage: MultimediaMetadata | null,
     publishData: Published
+}
+
+interface MultimediaMetadata{
+    image_public_id: string | null,
+    secure_url: string | null,
+    file_format: string | null,
+    file_size_bytes: number | null
 }
 
 interface Published{
