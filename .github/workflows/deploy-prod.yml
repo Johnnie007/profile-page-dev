@@ -25,7 +25,9 @@ jobs:
         run: npm ci
 
       - name: Build Angular Application
-        run: npm run build -- --configuration=production --base-href=/
+        run: npm run build -- --configuration=production --base-href=/ --define="PROD_SERVICE_URL='${PROD_SERVICE_URL}'"
+        env:
+          PROD_SERVICE_URL: ${{ vars.PROD_SERVICE_URL }}
 
       - name: Configure Custom Domain
         run: |
