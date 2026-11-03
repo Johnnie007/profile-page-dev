@@ -37,6 +37,7 @@ yarn-error.log
 testem.log
 /typings
 eslint-results.sarif
+.env
 
 # System files
 .DS_Store

@@ -9,7 +9,7 @@ export class RestService {
     private readonly http = inject(HttpClient);
     private readonly clientUrl = environment.clientUrl;
 
-    private readonly clientData$ = this.http.get<ClientData>(this.clientUrl).pipe(
+    private readonly clientData$ = this.http.get<ClientData>(`${this.clientUrl}api/client/details`).pipe(
         shareReplay({ bufferSize: 1, refCount: true })
     )
 
