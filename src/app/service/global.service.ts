@@ -1,7 +1,7 @@
 import { inject, Service } from '@angular/core';
 import { RestService } from '../rest-service/rest.service';
 import { Book } from '../models/book';
-import { map, Observable, tap } from 'rxjs';
+import { map, Observable} from 'rxjs';
 import { Project } from '../models/projects';
 import { UserDetails } from '../models/userDetails';
 
