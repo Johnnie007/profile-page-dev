@@ -1,7 +1,5 @@
 import { Component, inject } from '@angular/core';
-import { Project } from '../models/projects';
-import { RestService } from '../rest-service/rest.service';
-import { Observable } from 'rxjs';
+import { GlobalService } from '../service/global.service';
 
 @Component({
   selector: 'app-project-page',
@@ -10,10 +8,9 @@ import { Observable } from 'rxjs';
   styleUrl: './project-page.component.scss',
 })
 export class ProjectPageComponent{
-  projects: Project[];
-  private readonly restService = inject(RestService);
+  private readonly globalService = inject(GlobalService);
 
-  projects$: Observable<Project[]> = this.restService.getProjects();
+  readonly projects$ = this.globalService.projects$;
 
   navigateToProject(url: string | null | undefined): void {
     if (!url) {

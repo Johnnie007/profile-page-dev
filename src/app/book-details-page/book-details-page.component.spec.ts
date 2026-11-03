@@ -34,6 +34,7 @@ describe('BookDetailsPageComponent', () => {
 
   it('should set book from the resolved route data', () => {
     routeData.book = {
+      seriesId: 'series-1',
       id: '1',
       title: 'A Book',
       category: 'Fiction',
@@ -41,11 +42,11 @@ describe('BookDetailsPageComponent', () => {
       format: 'Paperback',
       price: '$10',
       inventory: 1,
-      printToOrderLink: null,
-      pdfVersion: null,
-      pages: 100,
-      cover: null,
-      published: {
+      printToOrder: null,
+      pdf: null,
+      numOfPages: 100,
+      coverImage: null,
+      publishData: {
         isPublished: true,
         publishedDate: new Date('2030-01-01'),
       },

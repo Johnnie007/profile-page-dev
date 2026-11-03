@@ -1,10 +1,5 @@
-export interface BookSeries{
-    id: string,
-    seriesName: string,
-    books: Book[]
-}
-
 export interface Book {
+    seriesId: string,
     id: string,
     title: string
     category: string,
@@ -12,11 +7,18 @@ export interface Book {
     format: string,
     price: string | null,
     inventory: number | null,
-    printToOrderLink: string | null,
-    pdfVersion: string | null,
-    pages: number | null,
-    cover: string | null,
-    published: Published
+    printToOrder: string | null,
+    pdf: string | null,
+    numOfPages: number | null,
+    coverImage: MultimediaMetadata | null,
+    publishData: Published
+}
+
+interface MultimediaMetadata{
+    image_public_id: string | null,
+    secure_url: string | null,
+    file_format: string | null,
+    file_size_bytes: number | null
 }
 
 interface Published{

@@ -1,36 +1,47 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
+import { of } from 'rxjs';
 import { BookPageComponent } from './book-page.component';
+import { RestService } from '../rest-service/rest.service';
+import { ClientData } from '../models/clientData';
 
 describe('BookPageComponent', () => {
   let component: BookPageComponent;
   let fixture: ComponentFixture<BookPageComponent>;
-  let httpTesting: HttpTestingController;
+  const clientData: ClientData = {
+    userDetails: {
+      id: 'user-1',
+      firstName: 'Test',
+      lastName: 'User',
+      mainText: 'Main',
+      subText: 'Sub',
+    },
+    projects: [],
+    books: [],
+  };
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [BookPageComponent],
       providers: [
-        provideHttpClientTesting()
+        { provide: RestService, useValue: { getClientDetails: () => of(clientData) } },
       ]
     })
     .compileComponents();
 
     fixture = TestBed.createComponent(BookPageComponent);
     component = fixture.componentInstance;
-    httpTesting = TestBed.inject(HttpTestingController);
-    fixture.detectChanges();
-
-    httpTesting.expectOne('assets/public/books.json').flush({
-      seriesName: 'Test Series',
-      books: []
-    });
   });
 
-  afterEach(() => httpTesting.verify());
-
   it('should create', () => {
+    fixture.detectChanges();
     expect(component).toBeTruthy();
+  });
+
+  it('should expose the books from the client data', () => {
+    let result;
+    component.books$.subscribe(books => result = books);
+
+    expect(result).toEqual(clientData.books);
   });
 
   it('should return year only from Date', ()=>{
