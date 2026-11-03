@@ -11,9 +11,6 @@ export class GlobalService{
     private readonly clientData$ = this.restService.getClientDetails();
 
     readonly books$: Observable<Book[]> = this.clientData$.pipe(
-        tap((x)=>{
-            console.log(x)
-        }),
         map(({ books }) => books)
     );
     readonly projects$: Observable<Project[]> = this.clientData$.pipe(

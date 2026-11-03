@@ -39,7 +39,7 @@ describe('RestServiceService', () => {
 
     service.getClientDetails().subscribe(value => result = value);
 
-    const request = httpTesting.expectOne(environment.clientUrl);
+    const request = httpTesting.expectOne(`${environment.clientUrl}api/client/details`);
     expect(request.request.method).toBe('GET');
     request.flush(clientData);
 
