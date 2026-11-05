@@ -7,5 +7,13 @@ import { Component } from '@angular/core';
   standalone: false
 })
 export class NavigationBarComponent {
+  isMenuOpen = false;
 
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
+
+  closeMenu(): void {
+    this.isMenuOpen = false;
+  }
 }

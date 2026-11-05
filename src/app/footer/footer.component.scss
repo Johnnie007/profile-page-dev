@@ -22,3 +22,10 @@
     width: 1.87rem;
     height: 1.875rem;
 }
+
+@media (max-width: 640px) {
+    
+    .footer-copyright-text{
+        font-size:14px
+    }
+}
