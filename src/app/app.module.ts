@@ -12,6 +12,7 @@ import { BookPageComponent } from './book-page/book-page.component';
 import { ProjectPageComponent } from './project-page/project-page.component';
 import { MaintenancePageComponent } from './maintenance-page/maintenance-page.component';
 import { BookDetailsPageComponent } from './book-details-page/book-details-page.component';
+import { LoadingSpinnerComponent } from './animation/loading-spinner';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { BookDetailsPageComponent } from './book-details-page/book-details-page.
     BookPageComponent,
     ProjectPageComponent,
     MaintenancePageComponent,
-    BookDetailsPageComponent
+    BookDetailsPageComponent,
+    LoadingSpinnerComponent
   ],
   imports: [
     BrowserModule,
