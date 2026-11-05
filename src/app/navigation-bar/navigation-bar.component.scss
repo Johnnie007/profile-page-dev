@@ -1,42 +1,110 @@
-.navigation-container{
+.navigation-container {
     display: flex;
     justify-content: space-between;
     background-color: #F8F5EF;
     border-bottom: 1px solid #DDDAD4;
 }
 
-.name-container{
+.name-container {
     margin-left: 1.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.name{
+.name {
     font-family: 'PhilosopherRegular';
-    font-size: 1.5rem
+    font-size: 1.5rem;
 }
 
-.navigation-links-container{
+.navigation-links-container {
     width: 31.25rem;
     margin-right: 3.75rem;
 }
 
-.navigation-link{
+.navigation-link {
     list-style-type: none;
     display: flex;
     justify-content: space-between;
+    padding-left: 0;
+    margin: 0;
 }
 
-.link{
+.link {
+    display: block;
     text-decoration: none;
     font-family: 'PhilosopherRegular';
     color: #7B7B7B;
-    padding-bottom: 5px;
+    padding: 1rem 0 5px;
 }
 
+.menu-toggle {
+    display: none;
+}
 
-.active-link{
+.active-link {
     color: #1C1917;
     font-family: 'PhilosopherBold';
+}
+
+@media (max-width: 1032px) {
+    .navigation-container {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    .name-container {
+        min-height: 4rem;
+        margin-left: 1rem;
+    }
+
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        margin-right: 0.5rem;
+        padding: 0;
+        color: #1C1917;
+        background: transparent;
+        border: 0;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .menu-toggle:focus-visible,
+    .link:focus-visible {
+        outline: 2px solid #2a4a3c;
+        outline-offset: 3px;
+    }
+
+    .menu-toggle svg {
+        width: 24px;
+        height: 24px;
+        fill: none;
+        stroke: currentColor;
+        stroke-linecap: round;
+        stroke-width: 2;
+    }
+
+    .navigation-links-container {
+        display: none;
+        width: 100%;
+        margin: 0;
+        border-top: 1px solid #DDDAD4;
+    }
+
+    .navigation-links-container.mobile-menu-open {
+        display: block;
+    }
+
+    .navigation-link {
+        flex-direction: column;
+        padding: 0.5rem 1rem;
+    }
+
+    .link {
+        padding: 0.75rem 0.5rem;
+    }
 }

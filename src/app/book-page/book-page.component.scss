@@ -153,3 +153,69 @@
 .info-icon{
   margin-left: 0.5rem;
 }
+
+@media (max-width: 1024px) {
+  .book-info-container {
+    display: none;
+  }
+
+  .cover-image {
+    width: 100px;
+    height: 150px;
+  }
+
+  .book-title {
+    font-size: 20px;
+  }
+
+  .book-details {
+    font-size: 12px;
+  }
+
+  .book-details-container {
+    max-width: 500px;
+    margin-right: 20px;
+  }
+
+  .book-detail-type,
+  .book-detail-format {
+    font-size: 16px;
+  }
+
+  .btn-container,
+  .upcoming-btn {
+    width: 100px;
+    height: 20px;
+  }
+
+  .btn,
+  .upcoming-btn {
+    font-size: 12px;
+
+  }
+}
+
+@media (max-width: 640px) {
+  .book-cover,
+  .book-detail-type,
+  .book-detail-format {
+    display: none;
+  }
+
+  .book-section {
+  display: flex;
+  flex-direction: column;
+}
+
+  .book-details-container {
+    margin-right: 0;
+  }
+
+  .book-details-right-sec{
+    height: auto;
+    width: auto;
+    margin-top: 2rem;
+  }
+
+
+}

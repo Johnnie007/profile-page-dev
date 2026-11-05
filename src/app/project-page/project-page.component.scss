@@ -169,3 +169,19 @@
   color: var(--accent);
   transform: translate(2px, -2px);
 }
+
+@media (max-width: 1024px) {
+  .col-stack {
+    display: none;
+  }
+
+  .thumb {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .col-category {
+    display: none;
+  }
+}

@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { GlobalService } from '../service/global.service';
 
 @Component({
     selector: 'app-about-page',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
     standalone: false
 })
 export class AboutPageComponent {
+readonly globalService = inject(GlobalService);
+readonly userDetails$ = this.globalService.userDetails$;
 }

@@ -4,6 +4,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    // justify-content: center;
     color: var(--foreground);
 }
 
@@ -57,7 +58,7 @@
     height: 50px;
     margin-top: 2rem;
     font-family: 'DM Sans';
-    font-size: 0.875;
+    font-size: 0.875rem;
     font-weight: 300;
     text-decoration: none;
 }
@@ -79,4 +80,52 @@
 
 .about-book-icon{
     margin-right: .5rem;
+}
+
+@media (max-width: 1032px) {
+    .about-page-container{
+        justify-content: center;
+    }
+    .about-page-header {
+        font-size: 16px;
+        margin: 0;
+    }
+
+    .title-text {
+        font-size: 20px;
+    }
+    .page-buttons{
+        min-width: 27rem;
+    }
+
+    .page-details,
+    .subtext-details {
+        width: 500px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 640px) {
+    .about-page-container{
+        justify-content: center;
+    }
+    .about-page-header {
+        font-size: 14px;
+    }
+
+    .title-text {
+        font-size: 20px;
+    }
+
+    .page-details,
+    .subtext-details {
+        max-width: 300px;
+        font-size: 14px;
+    }
+
+    .projects-btn, .book-btn{
+        width: 150px;
+        height: 50px;
+        font-size: 0.875;
+    }
 }

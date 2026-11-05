@@ -3,5 +3,5 @@ export interface UserDetails {
     firstName: string,
     lastName: string, 
     mainText: string,
-    subText: string,
+    subtext: string,
 }
