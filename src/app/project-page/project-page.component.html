@@ -18,8 +18,8 @@
     <tbody>
         @for (project of projects; track project.id){
         <tr class="table-row"
-          (click)="navigateToProject(project.link)"
-          (keydown.enter)="navigateToProject(project.link)"
+          (click)="navigateToProject(project.externalLink)"
+          (keydown.enter)="navigateToProject(project.externalLink)"
           role="button"
           tabindex="0"
           [attr.aria-label]="'View ' + project.name + ' project'"
@@ -27,7 +27,7 @@
           <td class="col-project">
             <div class="project-cell">
               <div class="thumb">
-                <img [src]="project.image" alt="" />
+                <img [src]="project.imageMetaData?.secure_url" alt="" />
               </div>
               <span class="project-title">{{project.name}}</span>
             </div>
@@ -35,12 +35,12 @@
           <td class="col-category">{{project.category}}</td>
           <td class="col-stack">
             <div class="tags">
-              @for(tech of project.stack; track $index){
+              @for(tech of project.techStack; track $index){
                 <span class="tag">{{tech}}</span>
               }
             </div>
           </td>
-          <td class="col-year">{{project.yearDeployed | date: 'yyyy' }}</td>
+          <td class="col-year">{{project.deployedDate | date: 'yyyy' }}</td>
           <td class="col-arrow">
               <svg class="arrow-icon" lucideExternalLink [size]="20" color="#7A7166" [strokeWidth]="1" title="Home"></svg>
           </td>

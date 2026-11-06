@@ -11,7 +11,9 @@
     <div class="book-section">
       <div class="book-cover">
         <div class="book-info-container">
-          <p class="numbers">{{ getPublishedYear(book.publishData.publishedDate) }}</p>
+          @if (book.publishData.published_date) {
+            <p class="numbers">{{ getPublishedYear(book.publishData.published_date) }}</p>
+          }
 
           @if (book.publishData.isPublished) {
             <div class="availability-container">
