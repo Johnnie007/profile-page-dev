@@ -158,7 +158,7 @@
     }
 
     .btn-outline-release {
-        width: 100px;
+        max-width: 150px;
         height: 20px;
         font-size: 12px;
         margin-top: 1rem;
@@ -202,10 +202,9 @@
     }
 
     .btn-outline-release {
-        width: 100px;
-        height: 20px;
-        font-size: 12px;
-        margin-top: 1rem;
+        min-width: 150px;
+        margin-bottom: 2rem;
+        
     }
 
     .available,
