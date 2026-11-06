@@ -1,7 +1,7 @@
 import { inject, Service } from '@angular/core';
 import { RestService } from '../rest-service/rest.service';
 import { Book } from '../models/book';
-import { map, Observable} from 'rxjs';
+import { map, Observable, tap} from 'rxjs';
 import { Project } from '../models/projects';
 import { UserDetails } from '../models/userDetails';
 
@@ -11,6 +11,7 @@ export class GlobalService{
     private readonly clientData$ = this.restService.getClientDetails();
 
     readonly books$: Observable<Book[]> = this.clientData$.pipe(
+        tap((x)=> console.log(x)),
         map(({ books }) => books)
     );
     readonly projects$: Observable<Project[]> = this.clientData$.pipe(

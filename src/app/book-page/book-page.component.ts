@@ -11,8 +11,13 @@ export class BookPageComponent{
   readonly globalService = inject(GlobalService);
   readonly books$ = this.globalService.books$;
 
-  getPublishedYear(date: Date): string {
-    return new Date(date).getFullYear().toString();
+  getPublishedYear(date: Date | string | null | undefined): string {
+    if (date == null) {
+      return '';
+    }
+
+    const parsedDate = new Date(date);
+    return Number.isNaN(parsedDate.getTime()) ? '' : parsedDate.getFullYear().toString();
   }
 
 }

@@ -50,4 +50,8 @@ describe('BookPageComponent', () => {
 
     expect(yearFromDate).toBe('2010')
   });
+
+  it('should not return a year when the published date is null', () => {
+    expect(component.getPublishedYear(null)).toBe('');
+  });
 });
