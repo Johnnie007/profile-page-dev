@@ -1,7 +1,4 @@
 import { Component, inject } from '@angular/core';
-import { BookSeries } from '../models/book';
-import { RestService } from '../rest-service/rest.service';
-import { Observable } from 'rxjs';
 import { GlobalService } from '../service/global.service';
 
 @Component({
@@ -11,13 +8,16 @@ import { GlobalService } from '../service/global.service';
   styleUrl: './book-page.component.scss',
 })
 export class BookPageComponent{
-  readonly globalService = inject(GlobalService); //used in html
-  readonly restService = inject(RestService);
+  readonly globalService = inject(GlobalService);
+  readonly books$ = this.globalService.books$;
 
-  bookSeries$: Observable<BookSeries> = this.restService.getBooks();
+  getPublishedYear(date: Date | string | null | undefined): string {
+    if (date == null) {
+      return '';
+    }
 
-  getPublishedYear(date: Date): string {
-    return new Date(date).getFullYear().toString();
+    const parsedDate = new Date(date);
+    return Number.isNaN(parsedDate.getTime()) ? '' : parsedDate.getFullYear().toString();
   }
 
 }

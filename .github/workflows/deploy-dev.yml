@@ -34,7 +34,9 @@ jobs:
         run: npm ci
 
       - name: Build Angular Application
-        run: npm run build -- --configuration=development --base-href=/profile-page-dev/
+        run: npm run build -- --configuration=development --base-href=/profile-page-dev/ --define="DEV_URL='${DEV_URL}'"
+        env:
+          DEV_URL: ${{ vars.DEV_URL }}
 
       - name: Configure Routing Fallbacks
         run: cp dist/profile-page/browser/index.html dist/profile-page/browser/404.html

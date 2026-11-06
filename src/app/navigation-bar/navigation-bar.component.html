@@ -1,16 +1,33 @@
 <div class="navigation-container">
-
     <div class="name-container">
-        <p class="name">Johnnie Hicks</p>
+        <p class="name">Johnnie H.</p>
     </div>
 
-    <nav class="navigation-links-container">
+    <button
+        class="menu-toggle"
+        type="button"
+        [attr.aria-expanded]="isMenuOpen"
+        [attr.aria-label]="isMenuOpen ? 'Close navigation menu' : 'Open navigation menu'"
+        aria-controls="primary-navigation"
+        (click)="toggleMenu()"
+    >
+        @if (isMenuOpen) {
+            <svg lucideX [size]="24"></svg>
+        } @else {
+            <svg lucideMenu [size]="24"></svg>
+        }
+    </button>
+
+    <nav
+        id="primary-navigation"
+        class="navigation-links-container"
+        [class.mobile-menu-open]="isMenuOpen"
+    >
         <ul class="navigation-link">
-            <li><a class="link" routerLinkActive="active-link" routerLink="/" [routerLinkActiveOptions]="{exact:true}">About</a></li>
-            <li><a class="link" routerLinkActive="active-link" routerLink="/projects">Projects</a></li>
-            <li><a class="link" routerLinkActive="active-link" routerLink="/books">Books</a></li>
-            <li><a class="link" routerLinkActive="active-link" routerLink="/shop">Shop</a></li>
+            <li><a class="link" routerLinkActive="active-link" routerLink="/" [routerLinkActiveOptions]="{exact:true}" (click)="closeMenu()">About</a></li>
+            <li><a class="link" routerLinkActive="active-link" routerLink="/projects" (click)="closeMenu()">Projects</a></li>
+            <li><a class="link" routerLinkActive="active-link" routerLink="/books" (click)="closeMenu()">Books</a></li>
+            <!-- <li><a class="link" routerLinkActive="active-link" routerLink="/shop">Shop</a></li> -->
         </ul>
     </nav>
-
 </div>

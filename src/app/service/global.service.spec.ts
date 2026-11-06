@@ -3,18 +3,25 @@ import { of } from 'rxjs';
 
 import { GlobalService } from './global.service';
 import { RestService } from '../rest-service/rest.service';
-import { BookSeries } from '../models/book';
+import { ClientData } from '../models/clientData';
 
 describe('GlobalServiceService', () => {
   let service: GlobalService;
-  let bookSeries: BookSeries;
+  let clientData: ClientData;
 
   beforeEach(() => {
-    bookSeries = {
-      id: 'series-1',
-      seriesName: 'Test Series',
+    clientData = {
+      userDetails: {
+        id: 'user-1',
+        firstName: 'Test',
+        lastName: 'User',
+        mainText: 'Main',
+        subText: 'Sub',
+      },
+      projects: [],
       books: [
         {
+          seriesId: 'series-1',
           id: '1',
           title: 'A Book: The Beginning',
           category: 'Fiction',
@@ -22,11 +29,11 @@ describe('GlobalServiceService', () => {
           format: 'Paperback',
           price: '$10',
           inventory: 1,
-          printToOrderLink: null,
-          pdfVersion: null,
-          pages: 100,
-          cover: null,
-          published: {
+          printToOrder: null,
+          pdf: null,
+          numOfPages: 100,
+          coverImage: null,
+          publishData: {
             isPublished: true,
             publishedDate: new Date('2024-01-01'),
           },
@@ -38,7 +45,7 @@ describe('GlobalServiceService', () => {
       providers: [
         {
           provide: RestService,
-          useValue: { getBooks: () => of(bookSeries) },
+          useValue: { getClientDetails: () => of(clientData) },
         },
       ],
     });
@@ -63,7 +70,7 @@ describe('GlobalServiceService', () => {
 
     service.getBooksById('1').subscribe(book => result = book);
 
-    expect(result).toEqual(bookSeries.books[0]);
+    expect(result).toEqual(clientData.books[0]);
   });
 
   it('should return null when a book ID is not found', () => {
@@ -80,7 +87,7 @@ describe('GlobalServiceService', () => {
     service.validateBookDetailsRoute('a-book-the-beginning', '1')
       .subscribe(book => result = book);
 
-    expect(result).toEqual(bookSeries.books[0]);
+    expect(result).toEqual(clientData.books[0]);
   });
 
   it('should return undefined for an invalid book route', () => {
@@ -90,5 +97,19 @@ describe('GlobalServiceService', () => {
       .subscribe(book => result = book);
 
     expect(result).toBeUndefined();
+  });
+
+  it('should expose each section of the client data', () => {
+    let books;
+    let projects;
+    let userDetails;
+
+    service.books$.subscribe(value => books = value);
+    service.projects$.subscribe(value => projects = value);
+    service.userDetails$.subscribe(value => userDetails = value);
+
+    expect(books).toEqual(clientData.books);
+    expect(projects).toEqual(clientData.projects);
+    expect(userDetails).toEqual(clientData.userDetails);
   });
 });

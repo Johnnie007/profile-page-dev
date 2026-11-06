@@ -1,10 +1,7 @@
-export interface BookSeries{
-    id: string,
-    seriesName: string,
-    books: Book[]
-}
+import { MultimediaMetadata } from "./mulitmediaMetadata"
 
 export interface Book {
+    seriesId: string,
     id: string,
     title: string
     category: string,
@@ -12,14 +9,15 @@ export interface Book {
     format: string,
     price: string | null,
     inventory: number | null,
-    printToOrderLink: string | null,
-    pdfVersion: string | null,
-    pages: number | null,
-    cover: string | null,
-    published: Published
+    printToOrder: string | null,
+    pdf: string | null,
+    numOfPages: number | null,
+    coverImage: MultimediaMetadata | null,
+    publishData: Published
 }
+
 
 interface Published{
     isPublished: boolean,
-    publishedDate: Date
+    published_date: Date | null
 }

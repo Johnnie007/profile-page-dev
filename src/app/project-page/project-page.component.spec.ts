@@ -1,55 +1,59 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { HttpTestingController, provideHttpClientTesting } from '@angular/common/http/testing';
+import { of } from 'rxjs';
 
 import { ProjectPageComponent } from './project-page.component';
 import { Project } from '../models/projects';
+import { RestService } from '../rest-service/rest.service';
+import { ClientData } from '../models/clientData';
+import { SharedIconsModule } from '../shared-icons.module';
 
 describe('ProjectPageComponent', () => {
   let component: ProjectPageComponent;
   let fixture: ComponentFixture<ProjectPageComponent>;
-  let httpTesting: HttpTestingController;
+  const projects: Project[] = [
+    {
+      id: '1',
+      name: 'Profile Page',
+      category: 'Web',
+      yearDeployed: new Date('2024-01-01'),
+      link: 'https://example.com',
+      stack: ['Angular'],
+      image: 'profile-page.png',
+    },
+  ];
+  const clientData: ClientData = {
+    userDetails: {
+      id: 'user-1',
+      firstName: 'Test',
+      lastName: 'User',
+      mainText: 'Main',
+      subText: 'Sub',
+    },
+    projects,
+    books: [],
+  };
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ProjectPageComponent],
+      imports: [SharedIconsModule],
       providers: [
-        provideHttpClientTesting()
+        { provide: RestService, useValue: { getClientDetails: () => of(clientData) } },
       ]
     })
     .compileComponents();
 
     fixture = TestBed.createComponent(ProjectPageComponent);
     component = fixture.componentInstance;
-    httpTesting = TestBed.inject(HttpTestingController);
   });
 
-  afterEach(() => httpTesting.verify());
-
   it('should create', () => {
-    fixture.detectChanges();
-    httpTesting.expectOne('assets/public/projects.json').flush([]);
-
     expect(component).toBeTruthy();
   });
 
-  it('should expose projects returned by the API', () => {
-    const projects: Project[] = [
-      {
-        id: '1',
-        name: 'Profile Page',
-        category: 'Web',
-        yearDeployed: new Date('2024-01-01'),
-        link: 'https://example.com',
-        stack: ['Angular'],
-        image: 'profile-page.png',
-      },
-    ];
-
+  it('should expose projects from the client data', () => {
     let result: Project[] | undefined;
-    fixture.detectChanges();
     component.projects$.subscribe(projectsValue => result = projectsValue);
-
-    httpTesting.expectOne('assets/public/projects.json').flush(projects);
 
     expect(result).toEqual(projects);
   });

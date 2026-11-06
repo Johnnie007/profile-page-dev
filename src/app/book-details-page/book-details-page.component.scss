@@ -139,3 +139,84 @@
     font-size: 16px;
     border: 1px solid #1A1916;
 }
+
+@media (max-width: 1032px) {
+    .book-container{
+        align-items: center;
+    }
+    .book-cover {
+        width: 200px;
+        height: 200px;
+    }
+
+    .book-title h1{
+        font-size: 30px;
+    }
+
+    .book-details {
+        font-size: 12px;
+    }
+
+    .btn-outline-release {
+        max-width: 150px;
+        height: 20px;
+        font-size: 12px;
+        margin-top: 1rem;
+    }
+
+    .available,
+    .forthcoming {
+        width: 90px;
+        height: 20px;
+    }
+
+    .available p,
+    .forthcoming p {
+        font-size: 12px;
+    }
+
+    .book-details-container{
+        padding: 0;
+    }
+}
+
+@media (max-width: 640px) {
+     .book-container{
+        flex-direction: column;
+    }
+    .book-cover {
+        width: 200px;
+        height: 200px;
+    }
+
+    .book-title h1{
+        font-size: 35px;
+        text-align: center;
+        padding-top: 1rem;
+    }
+    
+
+    .book-details {
+        font-size: 12px;
+        align-items: center;
+    }
+
+    .btn-outline-release {
+        min-width: 150px;
+        margin-bottom: 2rem;
+        
+    }
+
+    .available,
+    .forthcoming {
+       display: none;
+    }
+
+    .available p,
+    .forthcoming p {
+        font-size: 12px;
+    }
+    .book-details-container{
+        margin: 0;
+    }
+}
